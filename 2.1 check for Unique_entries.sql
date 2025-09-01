@@ -1,0 +1,1 @@
+SELECT DISTINCT GeneralHealth FROM health_dataset;
