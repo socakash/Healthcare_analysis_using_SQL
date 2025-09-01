@@ -30,18 +30,24 @@ Key attributes in the dataset:
 
 ## 🔍 Analysis Roadmap
 
-### 1. Demographics & General Health
+### Demographics & General Health
+
+
+
+```sql
 1. Population by state and sex  
 - Distribution of general health status  
 - Average physical and mental health days  
 
-```sql
 SELECT State, Sex, COUNT(*) AS population
 FROM health_dataset
 GROUP BY State, Sex
 ORDER BY population DESC;
+```
+<img width="476" height="651" alt="image" src="https://github.com/user-attachments/assets/cc31ca01-5958-43b8-be32-6aa8cdcd2cf4" />
 
 
+```
 2. Lifestyle & Health Correlations
 Impact of physical activity on physical health
 Sleep hours vs mental health days
@@ -52,8 +58,11 @@ SELECT "Sleep Hours", AVG("Mental Health Days") AS avg_mental
 FROM health_dataset
 GROUP BY "Sleep Hours"
 ORDER BY "Sleep Hours";
+```
+<img width="408" height="642" alt="image" src="https://github.com/user-attachments/assets/35e1addb-f521-4832-81ef-ca3cf157fc46" />
 
 
+```
 3. Chronic Disease Insights
 - Smoking status vs heart attack prevalence
 - Multi-condition cases (patients with both diabetes & heart disease)
@@ -63,8 +72,10 @@ SELECT "smokerstatus",
        ROUND(100.0 * SUM(CASE WHEN "hadheartattack"='Yes' THEN 1 ELSE 0 END)/COUNT(*),2) AS heart_attack_pct
 FROM health_dataset
 GROUP BY "smokerstatus";
+```
+<img width="475" height="221" alt="image" src="https://github.com/user-attachments/assets/42d980d0-b8c8-41c8-8415-e09687f20595" />
 
-
+```
 4. Preventive Care
 BMI categories vs diabetes risk
 
@@ -82,6 +93,9 @@ ROUND(100.0 * SUM(CASE WHEN "haddiabetes" = 'Yes' THEN 1 ELSE 0 END) / COUNT(*),
 FROM health_dataset
 GROUP BY bmi_category
 ORDER BY Percent_diabetes DESC;
+```
+<img width="347" height="208" alt="image" src="https://github.com/user-attachments/assets/eae5b461-f2e9-4170-9890-05dc9b8581b9" />
+
 
 
 
