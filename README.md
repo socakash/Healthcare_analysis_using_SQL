@@ -41,8 +41,6 @@ FROM health_dataset
 GROUP BY State, Sex
 ORDER BY population DESC;
 
-<img width="482" height="665" alt="image" src="https://github.com/user-attachments/assets/8628d401-56dc-4c7e-b658-5141f61b88d7" />
-
 
 2. Lifestyle & Health Correlations
 Impact of physical activity on physical health
@@ -55,7 +53,6 @@ FROM health_dataset
 GROUP BY "Sleep Hours"
 ORDER BY "Sleep Hours";
 
-<img width="527" height="680" alt="image" src="https://github.com/user-attachments/assets/48430657-5310-4073-acbc-78a2b731fcc9" />
 
 3. Chronic Disease Insights
 - Smoking status vs heart attack prevalence
@@ -67,7 +64,6 @@ SELECT "smokerstatus",
 FROM health_dataset
 GROUP BY "smokerstatus";
 
-<img width="475" height="298" alt="image" src="https://github.com/user-attachments/assets/ff45a9c9-ec13-4494-b7fd-a34d3eab9d90" />
 
 4. Preventive Care
 BMI categories vs diabetes risk
@@ -87,7 +83,6 @@ FROM health_dataset
 GROUP BY bmi_category
 ORDER BY Percent_diabetes DESC;
 
-<img width="340" height="212" alt="image" src="https://github.com/user-attachments/assets/eb59b307-dcdf-4f70-95dd-6247b2196c54" />
 
 
 ---
